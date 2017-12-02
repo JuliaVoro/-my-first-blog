@@ -34,10 +34,14 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sites',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'ckeditor',
+    #'fluent_contents.plugins.text',
+    #'django_wysiwyg',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +85,7 @@ DATABASES = {
     }
 }
 
-
+SITE_ID = 1
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -121,3 +125,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 ALLOWED_HOSTS = ['127.0.0.1', 'iuliiavorobiova.pythonanywhere.com']
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 800,
+    },
+}
